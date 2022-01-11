@@ -1,0 +1,42 @@
+$color: rgb(5, 8, 49);
+$color1: #4040a1;
+$color2: #36486b;
+$color3: #618685;
+$color4: #fefbd8;
+$color5: gainsboro;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+@font-face {
+  font-family: "Roboto Mono";
+  src: url(../font/RobotoMono-Regular.ttf);
+}
+body {
+  background-color: rgb(30, 30, 30);
+  font-family: "Roboto Mono", monospace;
+  font-size: 62.5%;
+}
+@keyframes cambio {
+  35% {
+    background-image: url(../img/good-night-2904747_1280.jpg);
+  }
+
+  70% {
+    background-image: url(../img/quino-al-gE3G-0qwlfU-unsplash.jpg);
+  }
+
+  100% {
+    background-image: url(../img/sky-5114499_1280.jpg);
+  }
+}
+@mixin movil {
+  @media (max-width: 700px) {
+    @content;
+  }
+}

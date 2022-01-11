@@ -1,0 +1,77 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 0.2fr 1fr;
+  grid-template-rows: 0.5fr 250px 0.5fr repeat(3, 250px) 0.5fr;
+  grid-template-areas:
+    "login login login"
+    "header header header"
+    "nav nav nav"
+    "content1 content1 content2"
+    "content3 content4 content4"
+    "content5 content5 content6"
+    "footer footer footer";
+}
+.login {
+  grid-area: login;
+}
+header {
+  grid-area: header;
+}
+nav {
+  grid-area: nav;
+}
+.content1 {
+  grid-area: content1;
+}
+.content2 {
+  grid-area: content2;
+}
+.content3 {
+  grid-area: content3;
+}
+.content4 {
+  grid-area: content4;
+}
+.content5 {
+  grid-area: content5;
+}
+.content6 {
+  grid-area: content6;
+}
+footer {
+  grid-area: footer;
+}
+@include movil {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas:
+      "login"
+      "header"
+      "nav"
+      "content2"
+      "content3"
+      "content5"
+      "content6"
+      "footer";
+  }
+  h1 {
+    display: none;
+  }
+  .login {
+    justify-content: center;
+  }
+  nav {
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  nav {
+    ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
